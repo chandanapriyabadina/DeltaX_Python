@@ -1,0 +1,15 @@
+# Step 1: Initialize the input list and target value
+nums = [2, 7, 11, 15]
+target = 9
+
+# Step 2: Use two loops to check every pair of numbers
+for i in range(len(nums)):
+    for j in range(i + 1, len(nums)):  # Start from i+1 to avoid same index
+        # Step 3: Check if the current pair adds to the target
+        if nums[i] + nums[j] == target:
+            # Step 4: Print the indices and stop the loop
+            print([i, j])
+            break  # Exit the inner loop
+    else:
+        continue  # Continue only if inner loop did not break
+    break  # Break outer loop if pair found

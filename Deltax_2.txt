@@ -1,0 +1,11 @@
+# Step 1: Input string
+text = "A man a plan a canal Panama"
+
+# Step 2: Remove spaces and convert to lowercase
+text = text.replace(" ", "").lower()
+
+# Step 3: Check if the string is a palindrome using slicing
+if text == text[::-1]:
+    print(True)
+else:
+    print(False)
