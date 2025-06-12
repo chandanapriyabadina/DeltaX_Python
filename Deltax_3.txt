@@ -1,0 +1,22 @@
+# Step 1: Define the input list and window size
+nums = [1, 3, -1, -3, 5, 3, 6, 7]
+k = 3
+
+# Step 2: Create an empty list to store the output
+result = []
+
+# Step 3: Loop through the list using a sliding window
+# The last starting index is len(nums) - k
+for i in range(len(nums) - k + 1):
+    max_value = nums[i]  # Assume the first element in window is the max
+
+    # Step 4: Find the maximum in the current window of size k
+    for j in range(1, k):
+        if nums[i + j] > max_value:
+            max_value = nums[i + j]
+    
+    # Step 5: Add the maximum value of this window to the result list
+    result.append(max_value)
+
+# Step 6: Print the result
+print(result)
